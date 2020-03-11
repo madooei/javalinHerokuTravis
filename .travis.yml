@@ -1,0 +1,15 @@
+language: java
+jdk: openjdk8
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: heroku
+  api_key:
+    secure: jHZeO6ZGh+WTCkHU41Mzq8FJ/RtPxy5LXRqbaxCpcwZF1q9LhzYeDMa3A9+3ZvJJsRYHXgk80EBvseMboFaozxQIUwhxldQaLa6pBg5pQvhWjnxxkHVHe4mID9yABVmK6utgDWsDB/eH1zwyF6ExBeiaBvtSioMPz1a4flXR5HkL6IJhQp7IfHVquZ4Bp/9hpQOOjdSzClXpkfzv8bvlgKoop+pHYSvGQ6vCc0LjprrV3CvZwz/7/Nz0qGAxXHZhQQtqNv/BHPPgVciYgPK3Gz2Kc4Q0cmSLXxK9hETcqSHVkp4cRHyrraZvKz/G1VFt50+GIMlbUfLKBPUKhN4tZWoHaTfuNN8RXaT7Iu7FeNcMRRDdB6YxCF0XwJkWjpYtpclG4BfwJSVWppXUwVjpzzoYxm7zaoLcwkIyJ15IBwC1E6pbfK8d5CNU/2MWTVa3W0yH8awQV6dCgwV5qeySgA46kB4uUTCe8EvUf2VIYyJ17Ka3sWjDuSflnr1IyTzcMMPgR5Dew5DHPlrBEImQ4Rys7Heo9g0PAJne7/k69x0rHddUS4BZ8o/2CTQ4D7khtTtcXOgcc/qx9AYCc+pc2rNCz62gCUw/i72oJKl5IDCSc3UWyx4HgepRues53GtXOsOHHIGmt014P9keoxdDNJZteIy5kaF3ZN28oxfjyaU=
+  app: stark-everglades-40927
+  skip_cleanup: true
